@@ -1,5 +1,6 @@
 import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/build/three.module.js';
 import {OrbitControls} from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/controls/OrbitControls.js';
+import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/GLTFLoader.js';
 const canvas = document.querySelector('#c');
 const renderer = new THREE.WebGLRenderer({canvas});
 
@@ -76,6 +77,44 @@ var wall_wire2 = new THREE.Mesh(wallGeometry, wireMaterial);
 wall_wire2.position.set(-150, 50, 20);
 wall_wire2.rotation.y = 3.14159 / 2;
 scene.add(wall_wire2);
+const manager = new THREE.LoadingManager();
+
+// const models = {
+//     knight: { url: 'https://threejsfundamentals.org/threejs/resources/models/knight/KnightCharacter.gltf' },
+//   };
+function addLight(...pos) {
+    const color = 0xFFFFFF;
+    const intensity = 1;
+    const light = new THREE.DirectionalLight(color, intensity);
+    light.position.set(...pos);
+    scene.add(light);
+    scene.add(light.target);
+  }
+    const gltfLoader = new GLTFLoader();
+    const url = 'https://threejsfundamentals.org/threejs/resources/models/knight/KnightCharacter.gltf';
+    gltfLoader.load(url, (gltf) => {
+      const root = gltf.scene;
+      console.log("root", root);
+      root.scale.x =15;
+      root.scale.y =15;
+      root.scale.z =15;
+      root.rotation.x = 5*3.14159 / 2;
+      scene.add(root);
+    //   const box = new THREE.Box3().setFromObject(root);
+
+    //   const boxSize = box.getSize(new THREE.Vector3()).length();
+    //   const boxCenter = box.getCenter(new THREE.Vector3());
+
+
+    //   // update the Trackball controls to handle the new size
+    //   controls.maxDistance = boxSize * 10;
+    //   controls.target.copy(boxCenter);
+    //   controls.update();
+    });
+    
+    addLight(-100,-100,100);
+
+//   console.log("knight", knight.gltf);
 
 // CONTROLS
 // var controls = new OrbitControls( camera, renderer.domElement );
