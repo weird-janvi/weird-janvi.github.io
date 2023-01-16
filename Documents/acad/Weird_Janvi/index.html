@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weird Janvi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b00a463b87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/shinchan.jpeg" class="logo">
+            <ul id ="sideMenu">
+                <li><a href="#header">Me</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#portfolio">Know Me Better</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p> A Shy and Akward Person,</p>
+            <h1>Welcome to <span>Weird Janvi</span>!</h1>
+        </div>
+    </div>
+</div>
+<!-------------------------about------------------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/janvi.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm Janvi, a graduate researcher with Masters degree in Computer Science with a specialisation in Information Technology and Society. My broad research interests includes :
+                    Social Psychology, Multi-Agent Systems,  Game Theory, Social Sciences, and Philosophy.</p>
+                <p>I believe that all these domains are so dependent on each other. Hence, multidisciplinary approach is required to solve the problems. Systems science and game theory can contribute to approach towards various  psychological and social science problems. I would share some of my previous work and writings here. </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('writing')">Writings</p>
+                    <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                    <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                </div>
+                <div class="tab-contents active-tab" id="writing">
+                    <ul>
+                        <li><span>The Shylock Syndrome</span><br> AI and Morality</li>
+                        <li><span>Disneyland Paris</span><br> Glocalization in Disneyland</li>
+                        <li><span>Gendered Surveillance</span><br> Gendered nature of technology</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>Computational Ethics</span><br> Comparative Framework of modelled ethical constructs</li>
+                        <li><span>Intrinsic Moitvation</span><br> When extrinsic payoff meets internal expectations</li>
+                        <li><span>EMPOW(HER)</span><br> A visualization dashboard for gender based crime in India</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="interests">
+                    <ul>
+                        <li><span>Social Psychology</span><br> AI and Morality</li>
+                        <li><span>Multi Agent systems</span><br> GLocalization in Disneyland</li>
+                        <li><span>Game Theory</span><br> Gendered nature of technology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------------------------blogs------------------------------ -->
+<div id="blogs">
+    <div class="container">
+        <h1 class="sub-title">Blogs</h1>
+        <div class="blogs-list">
+            <div>
+                <i class="fa-regular fa-scale-unbalanced-flip"></i>
+                <h2>Ethics of emotions</h2>
+                <p>Have to think about this. Though ethics seems to be rational concept which don't consider emotions, I feel they are inter-related.</p>
+                <a href="#">Read Here</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-nfc-directional"></i>
+                <h2>Where bounded rationality went wrong</h2>
+                <p>With generations, the available tools changed, culture developed, but I felt something more deeper change also happened. The way our 
+                    bounded rationality functions is different from theirs, which obviously would be in material terms, but it is also in emotional terms. 
+                </p>
+                <a href="#">Read Here</a>
+            </div>
+            <div>
+                <i class="fa-regular fa-face-surprise"></i>
+                <h2>Rationality and Emotions</h2>
+                <p>Emotions are usually ignore or are aliented from rational decision making. I would like to explore their relationship here. 
+                </p>
+                <a href="#">Read Here</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------portfolio------------------------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Know me better</h1>
+        <div class="my-list">
+            <div class="me">
+                <img src="images/goodreads.jpg">
+                <div class="layer">
+                    <h3>GoodReads Profile</h3>
+                    <p>“You could tell a lot about a man by the books he keeps - his tastes, his interest, his habits.”<br>
+                        ― Walter Benjamin<br>
+                       Check out books which are my comfort escape at my goodreads profile! </p>
+                    <a href="https://www.goodreads.com/user/show/137181305-janvi-chhabra"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="me">
+                <img src="images/music.jpg">
+                <div class="layer">
+                    <h3>Spotify Profile</h3>
+                    <p>“You can tell a lot about a person by what's on their playlist.”<br>
+                         ―Begin Again<br>
+                        Check out the songs that keep me going on my Spotify profile! </p>
+                    <a href="https://www.youtube.com/@janvichhabra3501/playlists"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="me">
+                <img src="images/insta.png">
+                <div class="layer">
+                    <h3>Instagram Profile</h3>
+                    <p>Photographs are where “our eyes are never closing, hearts are never broken and time's forever frozen still”<br>
+                         ―Ed Sheeran<br>
+                        Check out some random photos I take on my Instagram profile! </p>
+                    <a href="https://www.instagram.com/ssem_dloc/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------contact------------------------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Please don't contact me!</h1>
+                <p><i class="fa-regular fa-envelope"></i>janvi7109@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-retro"></i>+91 9825552129</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/janvi-chhabra-661644172/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/ChhabraJanvi"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="Docs/Janvi_Resume.pdf" download class="btn btn2">Download CV <br>at your own risk</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Don't Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright © Kevin. Made with Easy Tutorials</p>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tab){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tab).classList.add("active-tab");
+
+
+    }
+
+</script>
+
+<script>
+    var sideMenu = document.getElementById("sideMenu")
+
+    function openMenu(){
+        sideMenu.style.right = "0";
+    }
+
+    function closeMenu(){
+        sideMenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyyOMeQeSYYCrk_iGZsP6GJ82RItDBJ7l7ctrn9u_91yIWSHpzXBz1NjWMaTI4CsGBn-w/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Submitted Successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
